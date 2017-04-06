@@ -1,28 +1,14 @@
-Marlene Shankar  
-ID 108796571
+Simple Language Model Builder
+-----------------------------
 
-Test Set Perplexities:  
+How to run:  
+    
+    LM-Builder (Runtime ~10 seconds): python3 lm-builder.py <path/to/train.txt>
+    Bigram-Query: python3 bigram-query.py <path/to/bigram.lm> <path/to/unigram.lm> <word1> <word2> <smoothing: M, L, I, K>
+    Perplexity: python3 perplexity.py <path/to/bigram.lm> <path/to/unigram.lm> <path/to/test.txt>
 
-    Laplace Bigram Model -     
-    Interpolation Bigram Model -   
-    Laplace Unigram Model -   
+Methodology:
 
-Explain observations. Why is one higher than the other?  
-
-    Answer
-
-Top 20 Laplace Bigram:  
-
-    Answer
-
-Written Assignment:
-
-    (a) Question 1: Specify how to compute P rAD(y|x) for cases where (x, y) = \
-    0, so that it is a valid probability distribution. You should provide that with \
-    your specification, P rAD(y|x) is indeed a valid probability distribution.
-        
-        ANSWER
-        
-    (b) Question 2: Please show that P rL(y|x) is a valid probability distribution.
-        
-        ANSWER
+    <s> and </s> were added in the training and dev data for Part 1
+    Performed dumb tokenization specified in the homework pdf, splitting on the spaces and periods
+    Calculated probabilities as per the Estimation methods
